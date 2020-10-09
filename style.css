@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid salmon;
+  width: 600px;
+  height: 600px;
+}
+
+.cell {
+  width: 16.66%;
+  height: 16.67%;
+  border: 1px solid rgb(118, 250, 114);
+}
+
+.candy1 {
+  background-image: url("https://static.turbosquid.com/Preview/2016/09/03__06_35_10/Banana_Signature_Square.jpgB006473A-55C8-4176-A65E-BAA3A88E6133Res200.jpg");
+  background-size: contain;
+}
+
+.candy2 {
+  background-image: url("https://lh3.googleusercontent.com/proxy/EUNGPhVZPKMPaUd0kYWAHU26EPY0A63u6XSQ3jNbb1oLoe4ad-PIY8D3_mApodk8aS56Ydji0r0joB1xFJgbOeaOldI283j2kcw8KS4Wz2tTD1p6py4UWu3Yt4jJ");
+  background-size: contain;
+}
+
+.candy3 {
+  background-image: url("https://www.morningbag.com/api/public/product/567/1583234452849.png");
+  background-size: contain;
+}
