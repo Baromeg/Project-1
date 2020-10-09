@@ -11,22 +11,53 @@ let score = 0
 let candy = 8
 let movesLeft = 10
 
-const candies = ['.candy1', '.candy2', '.candy3']
-const randomCandy = candies[Math.floor(Math.random() * candies.length)]
-console.log(randomCandy)
+const candies = ['candy1', 'candy2', 'candy3']
+const randomCandy = () => {
+  return candies[Math.floor(Math.random() * candies.length)]
+}
+
 const width = 6
 
+//*Creating the grid
 for (let i = 0; i < width ** 2; i++) {
   const div = document.createElement('div')
   div.classList.add('cell')
   grid.appendChild(div)
+  div.innerHTML = i
   cells.push(div)
 }
 
+console.log((Array.isArray(cells)))
+//* Starting the game
+startButton.addEventListener('click', () => {
+  setInterval(() => {
+
+  }, 2000)
+  cells.forEach((cell) => {
+    console.log(cell)
+    cell.classList.add(randomCandy())
+  })
+  console.log(typeof (cells.forEach))
+
+
+
+})
+console.log((Array.isArray(cells)))
+
+
+
+
+
+
+
+console.log(randomCandy())
+
+//*Typical pattern = not needed
 cells[candy].classList.remove('candy1')
 candy -= 1
 cells[candy].classList.add('candy1')
 
+//* Movement across the grid test - Interested in the down movement
 document.addEventListener('keypress', (event) => {
   const key = event.key
   console.log(key)
@@ -48,7 +79,6 @@ document.addEventListener('keypress', (event) => {
     cells[candy].classList.add('candy1')
   }
 })
-console.log((width ** 2) - width - 1)
 
 // cells[2].classList.add('candy1')
 // cells[3].classList.add('candy1')
