@@ -1,93 +1,212 @@
-const displayScore = document.querySelector('.displayScore')
+const displayScore = document.querySelector('#displayScore')
 
-const displayMovesLeft = document.querySelector('.displayMovesLeft')
+const displayLives = document.querySelector('#displayLives')
 
 const startButton = document.querySelector('.startButton')
 
 const grid = document.querySelector('.grid')
 
+const cell = document.querySelector('.cell')
 const cells = []
-let score = 0
-let candy = 8
-let movesLeft = 10
+const width = 9
 
-const candies = ['candy1', 'candy2', 'candy3']
-const randomCandy = () => {
-  return candies[Math.floor(Math.random() * candies.length)]
-}
+const frogStyle = document.querySelector('.frog')
+const lilyLeave = document.querySelector('.lilyLeave')
+const cars = document.querySelector('.cars')
+const trunks = document.querySelector('.trunks')
+const trunks2 = document.querySelector('.trunks2')
 
-const width = 6
 
-//*Creating the grid
-for (let i = 0; i < width ** 2; i++) {
+let frog = 76
+let lilyLeavePosition = 1
+let carsPosition1 = 8
+let carsPosition2 = 7
+let carsPosition3 = 8
+let trunkPosition1 = 0
+let trunkPosition2 = 1
+
+
+
+//* Creates the grid based on the width
+for (let index = 0; index < width ** 2; index++) {
   const div = document.createElement('div')
   div.classList.add('cell')
   grid.appendChild(div)
-  div.innerHTML = i
+  div.innerHTML = index
   cells.push(div)
 }
 
-console.log((Array.isArray(cells)))
-//* Starting the game
+//* Initial position of the frog
+cells[frog].classList.add('frog')
+
+//* Start of the game / reset frog position
 startButton.addEventListener('click', () => {
-  setInterval(() => {
-
-  }, 2000)
-  cells.forEach((cell) => {
-    console.log(cell)
-    cell.classList.add(randomCandy())
-  })
-  console.log(typeof (cells.forEach))
-
-
-
+  cells[frog].classList.remove('frog')
+  frog = 76
+  cells[frog].classList.add('frog')
 })
-console.log((Array.isArray(cells)))
+
+//* Initial position of the lilyleaves
+cells[lilyLeavePosition].classList.add('lilyLeave')
+cells[3].classList.add('lilyLeave')
+cells[5].classList.add('lilyLeave')
+cells[7].classList.add('lilyLeave')
 
 
+console.log(cells)
 
-
-
-
-
-console.log(randomCandy())
-
-//*Typical pattern = not needed
-cells[candy].classList.remove('candy1')
-candy -= 1
-cells[candy].classList.add('candy1')
-
-//* Movement across the grid test - Interested in the down movement
-document.addEventListener('keypress', (event) => {
+//* Creates the movement of the frog
+document.addEventListener('keydown', (event) => {
   const key = event.key
   console.log(key)
-  if (key === 'w' && !(candy < width)) {
-    cells[candy].classList.remove('candy1')
-    candy -= width
-    cells[candy].classList.add('candy1')
-  } else if (key === 's' && !(candy > (width ** 2) - width - 1)) {
-    cells[candy].classList.remove('candy1')
-    candy += width
-    cells[candy].classList.add('candy1')
-  } else if (key === 'a' && !(candy % width === 0)) {
-    cells[candy].classList.remove('candy1')
-    candy -= 1
-    cells[candy].classList.add('candy1')
-  } else if (key === 'd' && !(candy % width === width - 1)) {
-    cells[candy].classList.remove('candy1')
-    candy += 1
-    cells[candy].classList.add('candy1')
+  if (key === 'ArrowUp' && !(frog < width)) {
+    cells[frog].classList.remove('frog')
+    frog -= width
+    cells[frog].classList.add('frog')
+  } else if (key === 'ArrowDown' && !(frog > (width ** 2) - width - 1)) {
+    cells[frog].classList.remove('frog')
+    frog += width
+    cells[frog].classList.add('frog')
+  } else if (key === 'ArrowLeft' && !(frog % width === 0)) {
+    cells[frog].classList.remove('frog')
+    frog -= 1
+    cells[frog].classList.add('frog')
+  } else if (key === 'ArrowRight' && !(frog % width === width - 1)) {
+    cells[frog].classList.remove('frog')
+    frog += 1
+    cells[frog].classList.add('frog')
   }
 })
 
-// cells[2].classList.add('candy1')
-// cells[3].classList.add('candy1')
-// cells[4].classList.add('candy1')
-// cells[8].classList.add('candy2')
-// cells[9].classList.add('candy2')
-// cells[1].classList.add('candy2')
-// cells[0].classList.add('candy3')
-// cells[5].classList.add('candy3')
-// cells[16].classList.add('candy3')
-console.log(cells)
+//! Movement of the cars
+//*Created individual arrays for each car to loop through
+const firstCarArray = cells.slice(54, 63)
+firstCarArray[carsPosition1].classList.add('cars')
+
+const secondCarArray = cells.slice(45, 54)
+secondCarArray[carsPosition2].classList.add('cars')
+
+const thirdCarArray = cells.slice(36, 45)
+thirdCarArray[carsPosition3].classList.add('cars')
+
+//* Each car has it's own interval to avoid conflicts in the loops
+setInterval(() => {
+  if ((carsPosition1 % width === 0)) {
+    firstCarArray[carsPosition1].classList.remove('cars')
+    carsPosition1 = 8
+    firstCarArray[carsPosition1].classList.add('cars')
+  }
+  if (firstCarArray[carsPosition1].classList.contains('frog')) {
+    console.log('you are dead!')
+  }
+  carCycle1()
+}, 1000)
+
+setInterval(() => {
+  if ((carsPosition2 % width === 0)) {
+    secondCarArray[carsPosition2].classList.remove('cars')
+    carsPosition2 = 8
+    secondCarArray[carsPosition2].classList.add('cars')
+  }
+  carCycle2()
+}, 1000)
+
+setInterval(() => {
+  if ((carsPosition3 % width === 0)) {
+    thirdCarArray[carsPosition3].classList.remove('cars')
+    carsPosition3 = 8
+    thirdCarArray[carsPosition3].classList.add('cars')
+  }
+  carCycle3()
+}, 1000)
+
+//*Each car has it's own function, as when I created a function which you could input (array, position) came up as undefined, I believe it was because of the -= operation
+const carCycle1 = () => {
+  firstCarArray[carsPosition1].classList.remove('cars')
+  carsPosition1 -= 1
+  firstCarArray[carsPosition1].classList.add('cars')
+}
+const carCycle2 = () => {
+  secondCarArray[carsPosition2].classList.remove('cars')
+  carsPosition2 -= 1
+  secondCarArray[carsPosition2].classList.add('cars')
+}
+const carCycle3 = () => {
+  thirdCarArray[carsPosition3].classList.remove('cars')
+  carsPosition3 -= 1
+  thirdCarArray[carsPosition3].classList.add('cars')
+}
+
+//! Movement of the trunks
+// //*Created individual arrays for each car to loop through
+const firstTrunkArray = cells.slice(18, 27)
+firstTrunkArray[trunkPosition1].classList.add('trunks')
+// firstTrunkArray[trunkPosition2].classList.add('trunks2')
+
+// const secondCarArray = cells.slice(45, 54)
+// secondCarArray[carsPosition2].classList.add('cars')
+
+// const thirdCarArray = cells.slice(36, 45)
+// thirdCarArray[carsPosition3].classList.add('cars')
+
+// //* Each trunk has it's own interval to avoid conflicts in the loops
+setInterval(() => {
+  if ((trunkPosition1 % width === width - 1)) {
+    firstTrunkArray[trunkPosition1].classList.remove('trunks')
+    trunkPosition1 = 0
+    firstTrunkArray[trunkPosition1].classList.add('trunks')
+  }
+  trunkCycle1()
+}, 1000)
+
+// setInterval(() => {
+//   if ((trunkPosition2 % width === width - 1)) {
+
+//     firstTrunkArray[trunkPosition2].classList.remove('trunks2')
+//     trunkPosition2 = 1
+//     firstTrunkArray[trunkPosition2].classList.add('trunks2')
+//   }
+//   trunkCycle2()
+// }, 1000)
+
+// setInterval(() => {
+//   if ((carsPosition2 % width === 0)) {
+//     secondCarArray[carsPosition2].classList.remove('cars')
+//     carsPosition2 = 8
+//     secondCarArray[carsPosition2].classList.add('cars')
+//   }
+//   carCycle2()
+// }, 1000)
+
+// setInterval(() => {
+//   if ((carsPosition3 % width === 0)) {
+//     thirdCarArray[carsPosition3].classList.remove('cars')
+//     carsPosition3 = 8
+//     thirdCarArray[carsPosition3].classList.add('cars')
+//   }
+//   carCycle3()
+// }, 1000)
+
+// //*Each car has it's own function, as when I created a function which you could input (array, position) came up as undefined, I believe it was because of the -= operation
+const trunkCycle1 = () => {
+  firstTrunkArray[trunkPosition1].classList.remove('trunks')
+  trunkPosition1 += 1
+  firstTrunkArray[trunkPosition1].classList.add('trunks')
+
+}
+// const trunkCycle2 = () => {
+//   firstTrunkArray[trunkPosition2].classList.remove('trunk2')
+//   trunkPosition2 += 1
+//   firstTrunkArray[trunkPosition2].classList.add('trunks2')
+// }
+// const carCycle2 = () => {
+//   secondCarArray[carsPosition2].classList.remove('cars')
+//   carsPosition2 -= 1
+//   secondCarArray[carsPosition2].classList.add('cars')
+// }
+// const carCycle3 = () => {
+//   thirdCarArray[carsPosition3].classList.remove('cars')
+//   carsPosition3 -= 1
+//   thirdCarArray[carsPosition3].classList.add('cars')
+// }
 

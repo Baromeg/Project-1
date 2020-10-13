@@ -10,32 +10,25 @@ body {
   flex-direction: column;
   margin: 0;
 }
-
 .header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   width: 400px;
   padding: 15px;
 }
-
 .display {
-  height: 50px;
+  height: 80px;
   width: 100px;
-  border: 1px solid salmon;
+  padding: 30px;
+  display: flex;
   text-align: center;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-.startButton {
-  height: 50px;
-  width: 100px;
-  border: 1px solid salmon;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  border: 2px solid salmon;
+  border-radius: 4px;
 }
 
 .grid {
@@ -48,22 +41,38 @@ body {
 }
 
 .cell {
-  width: 16.66%;
-  height: 16.67%;
-  border: 1px solid rgb(118, 250, 114);
+  width: 11.11%;
+  height: 11.11%;
+  border: 1px dotted salmon;
 }
 
-.candy1 {
-  background-image: url("https://static.turbosquid.com/Preview/2016/09/03__06_35_10/Banana_Signature_Square.jpgB006473A-55C8-4176-A65E-BAA3A88E6133Res200.jpg");
+.lilyLeave {
+  background-image: url("https://lh3.googleusercontent.com/proxy/iQRkqmHYzxwvNnVvv8gr9Xr0_x-4Nyw38DhyHDsWMd2DZSV_99L3Adyp4pv45O7OH6zoKfGgM8556XS1EOQzr1mMmeVL5PkssapnVCowG89K6OQe3mbpxA");
+  background-position-y: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.frog {
+  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.trunks {
+  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png");
+  background-size: contain;
+}
+.trunks2 {
+  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png");
   background-size: contain;
 }
 
-.candy2 {
-  background-image: url("https://webstockreview.net/images/apple-clipart-clear-background-1.png");
+.cars {
+  background-image: url("https://www.classiccarbank.co.uk/wp-content/uploads/2018/09/full-classic-cars.png");
   background-size: contain;
-}
-
-.candy3 {
-  background-image: url("https://www.morningbag.com/api/public/product/567/1583234452849.png");
-  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
 }

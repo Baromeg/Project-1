@@ -3,23 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frogger</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
   </head>
   <body>
-    <h1>Hello world! Baltasar is coming!</h1>
-    <section class="header">
-      <div>
-        <div id="displayScore" class="display">0</div>
-        Points
-      </div>
-      <div class="startButton">Start</div>
-      <div>
-        <div id="displayMovesLeft" class="display">0</div>
-        Moves Left
-      </div>
-    </section>
-    <section class="grid"></section>
+    <header>
+      <h1>The Frogger</h1>
+      <section class="header">
+        <div class="display">
+          <h3>Score</h3>
+          <div id="displayScore">0</div>
+        </div>
+        <div class="startButton">Start</div>
+        <div class="display">
+          <h3>Lives</h3>
+          <div id="displayLives">3</div>
+        </div>
+      </section>
+      <section>
+        <div class="grid"></div>
+      </section>
+    </header>
+    <main></main>
   </body>
   <script src="app.js"></script>
 </html>
