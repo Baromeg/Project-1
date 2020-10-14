@@ -38,34 +38,41 @@ body {
   border: 1px solid salmon;
   width: 600px;
   height: 600px;
+  background-color: rgb(193, 238, 193);
 }
 
 .cell {
   width: 11.11%;
   height: 11.11%;
-  border: 1px dotted salmon;
+  /* border: 1px dotted salmon; */
 }
 
 .lilyLeave {
-  background-image: url("https://lh3.googleusercontent.com/proxy/iQRkqmHYzxwvNnVvv8gr9Xr0_x-4Nyw38DhyHDsWMd2DZSV_99L3Adyp4pv45O7OH6zoKfGgM8556XS1EOQzr1mMmeVL5PkssapnVCowG89K6OQe3mbpxA");
+  background-image: url("https://cdn.pixabay.com/photo/2018/04/24/18/26/water-lily-3347654__340.png"),
+    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
   background-position-y: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.frog {
-  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: center;
 }
 
+.water {
+  background-image: url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-size: contain;
+  background-position: bottom left;
+}
 .trunks {
-  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png");
+  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
+    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
   background-size: contain;
 }
 .trunks2 {
-  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png");
+  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
+    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-size: contain;
+}
+.trunks3 {
+  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
+    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
   background-size: contain;
 }
 
@@ -75,4 +82,31 @@ body {
   background-position-y: center;
   background-repeat: no-repeat;
   transform: rotateY(180deg);
+  background-color: gray;
+}
+.cars2 {
+  background-image: url("https://www.classiccarbank.co.uk/wp-content/uploads/2018/09/full-classic-cars.png");
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-color: gray;
+}
+
+.road {
+  background-color: gray;
+  border-top: 1 dashed white;
+}
+.frog {
+  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.frogWater {
+  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+    url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
+    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-size: cover, contain;
+  background-repeat: no-repeat, repeat;
 }
