@@ -98,37 +98,10 @@ h3 {
 }
 
 .lilyLeave {
-  background-image: url("images/lily\ 3.png"),
-    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-image: url("images/lily\ 3.png"), url("images/water.gif");
   /* background-position-y: center; */
   background-size: contain;
   /* background-repeat: no-repeat; */
-}
-
-.water {
-  background-image: url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
-  background-size: contain;
-  background-position: bottom left;
-}
-.water18 {
-  background-image: url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
-  background-size: contain;
-  background-position: bottom left;
-}
-.trunks {
-  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
-    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
-  background-size: contain;
-}
-.trunks2 {
-  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
-    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
-  background-size: contain;
-}
-.trunks3 {
-  background-image: url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
-    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
-  background-size: contain;
 }
 .top-road {
   background-image: url(images/road\ top.png);
@@ -146,17 +119,32 @@ h3 {
   background-repeat: no-repeat;
   background-color: gray;
 }
+.water {
+  background-image: url("images/water.gif");
+  background-size: contain;
+  background-position: bottom left;
+}
+.water18 {
+  background-image: url("images/water.gif");
+  background-size: contain;
+  background-position: bottom left;
+}
+.trunks {
+  background-image: url("images/Cross-Section-of-Tree-Trunk.png"),
+    url("images/water.gif");
+  background-size: contain;
+}
+
 .cars {
   background-image: url("images/full-classic-cars\ copy.png"),
     url(images/road\ bottom.png);
   background-size: contain;
   background-position-y: center;
   background-repeat: no-repeat;
-  /* transform: rotateY(180deg); */
   background-color: gray;
 }
 .cars2 {
-  background-image: url("https://www.classiccarbank.co.uk/wp-content/uploads/2018/09/full-classic-cars.png"),
+  background-image: url("images/full-classic-cars.png"),
     url(images/road\ top.png);
   background-size: contain;
   background-position-y: center;
@@ -172,26 +160,38 @@ h3 {
 }
 
 .frog {
-  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif");
+  background-image: url("images/0c53773ae95e34d69e99fcd16fc9cc63.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
 }
 
 .frogWater {
-  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
-    url("https://images.twinkl.co.uk/tr/image/upload/illustation/Cross-Section-of-Tree-Trunk.png"),
-    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-image: url("images/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+    url("images/Cross-Section-of-Tree-Trunk.png"), url("images/water.gif");
   background-size: cover, contain;
   background-repeat: no-repeat, repeat;
 }
 
 .frogGrass {
-  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+  background-image: url("images/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
     url("images/grass.gif");
   background-size: cover, contain;
   background-repeat: no-repeat, repeat;
 }
+.frogTop {
+  background-image: url("images/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+    url("images/road\ top.png");
+  background-size: cover, contain;
+  background-repeat: no-repeat, repeat;
+}
+.frogBottom {
+  background-image: url("images/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+    url("images/road\ bottom.png");
+  background-size: cover, contain;
+  background-repeat: no-repeat, repeat;
+}
+
 .crocodile {
   background-image: url("images/crocodile\ gif.gif"), url("images/grass.gif");
   background-size: contain;
@@ -206,17 +206,15 @@ h3 {
   background-position-y: center;
 }
 .frogWins {
-  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
-    url("images/lily\ 3.png"),
-    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-image: url("images/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+    url("images/lily\ 3.png"), url("images/water.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
 }
 
 .cell81 {
-  background-image: url("https://static.thenounproject.com/png/264898-200.png"),
-    url(images/grass.gif);
+  background-image: url("images/keyboard.png"), url(images/grass.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
