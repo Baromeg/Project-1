@@ -213,3 +213,11 @@ h3 {
   background-repeat: no-repeat;
   background-position-y: center;
 }
+
+.cell81 {
+  background-image: url("https://static.thenounproject.com/png/264898-200.png"),
+    url(images/grass.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}

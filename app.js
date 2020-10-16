@@ -61,6 +61,7 @@ cells[76].classList.add('grass')
 cells[18].classList.add('water18')
 cells[35].classList.add('water18')
 cells[8].classList.add('water18')
+cells[80].classList.add('cell81')
 
 //* Start of the game / reset frog position
 startButton.addEventListener('click', () => {
