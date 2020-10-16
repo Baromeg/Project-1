@@ -9,6 +9,43 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 0;
+  background-image: url(images/89500458-green-dotted-seamless-pattern-background-wallpaper-print-or-swatch.jpg);
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 30px;
+  /* color: #411191; */
+  color: #f39233;
+  background-image: url(images/water.gif);
+  background-repeat: repeat;
+  background-size: contain;
+  padding: 10px;
+  /* font-family: "Lemonada", cursive; */
+  font-family: "Bangers", cursive;
+
+  border-radius: 35px;
+  border: 2px solid #f39233;
+}
+h1 {
+  font-size: 50px;
+  color: #f39233;
+  /* font-family: "Bangers", cursive; */
+  /* font-family: "Press Start 2P", cursive; */
+  /* font-family: "Fredericka the Great", cursive; */
+  /* font-family: "Rock Salt", cursive; */
+}
+.startButton {
+  font-size: 30px;
+  background-image: url(images/0c53773ae95e34d69e99fcd16fc9cc63.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: end;
+  height: 80px;
+  padding-top: 50px;
 }
 .header {
   display: flex;
@@ -17,45 +54,63 @@ body {
   justify-content: space-around;
   width: 400px;
   padding: 15px;
+  /* background-image: url(images/lily\ 3.png);
+  background-size: contain; */
 }
 .display {
-  height: 80px;
-  width: 100px;
-  padding: 30px;
+  height: 90px;
+  width: 90px;
+  /* padding: 30px; */
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid salmon;
   border-radius: 4px;
+  background-image: url(images/lily\ 3.png);
+  background-size: cover;
+  font-size: 20px;
+  /* font-weight: bold; */
+  font-family: "Bangers", cursive;
 }
-
+h3 {
+  height: 10px;
+}
+#displayScore,
+#displayLives {
+  font-size: 30px;
+}
 .grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid salmon;
+  border: 10px solid #f39233;
   width: 600px;
   height: 600px;
   background-color: rgb(193, 238, 193);
 }
 
 .cell {
-  width: 11.11%;
-  height: 11.11%;
+  width: 11.112%;
+  height: 11.122%;
+  background-color: rgb(94, 139, 27);
   /* border: 1px dotted salmon; */
 }
 
 .lilyLeave {
-  background-image: url("https://cdn.pixabay.com/photo/2018/04/24/18/26/water-lily-3347654__340.png"),
+  background-image: url("images/lily\ 3.png"),
     url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
-  background-position-y: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-position-y: center; */
+  background-size: contain;
+  /* background-repeat: no-repeat; */
 }
 
 .water {
+  background-image: url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-size: contain;
+  background-position: bottom left;
+}
+.water18 {
   background-image: url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
   background-size: contain;
   background-position: bottom left;
@@ -75,27 +130,47 @@ body {
     url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
   background-size: contain;
 }
-
-.cars {
-  background-image: url("https://www.classiccarbank.co.uk/wp-content/uploads/2018/09/full-classic-cars.png");
+.top-road {
+  background-image: url(images/road\ top.png);
+  background-color: gray;
   background-size: contain;
   background-position-y: center;
   background-repeat: no-repeat;
-  transform: rotateY(180deg);
+  background-color: gray;
+}
+.bottom-road {
+  background-image: url(images/road\ bottom.png);
+  background-color: gray;
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-color: gray;
+}
+.cars {
+  background-image: url("images/full-classic-cars\ copy.png"),
+    url(images/road\ bottom.png);
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  /* transform: rotateY(180deg); */
   background-color: gray;
 }
 .cars2 {
-  background-image: url("https://www.classiccarbank.co.uk/wp-content/uploads/2018/09/full-classic-cars.png");
+  background-image: url("https://www.classiccarbank.co.uk/wp-content/uploads/2018/09/full-classic-cars.png"),
+    url(images/road\ top.png);
   background-size: contain;
   background-position-y: center;
   background-repeat: no-repeat;
   background-color: gray;
 }
 
-.road {
-  background-color: gray;
-  border-top: 1 dashed white;
+.grass {
+  background-image: url("images/grass.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
+
 .frog {
   background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif");
   background-size: cover;
@@ -109,4 +184,32 @@ body {
     url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
   background-size: cover, contain;
   background-repeat: no-repeat, repeat;
+}
+
+.frogGrass {
+  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+    url("images/grass.gif");
+  background-size: cover, contain;
+  background-repeat: no-repeat, repeat;
+}
+.crocodile {
+  background-image: url("images/crocodile\ gif.gif"), url("images/grass.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.crocodileFrog {
+  background-image: url("images/crocodile\ gif.gif"), url("images/grass.gif"),
+    url(images/0c53773ae95e34d69e99fcd16fc9cc63.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.frogWins {
+  background-image: url("https://i.pinimg.com/originals/0c/53/77/0c53773ae95e34d69e99fcd16fc9cc63.gif"),
+    url("images/lily\ 3.png"),
+    url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
