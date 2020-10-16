@@ -71,7 +71,6 @@ document.addEventListener('keydown', (event) => {
     if (cells[frog].classList.contains('lilyLeave')) {
       cells[frog].classList.add('frogWins')
     }
-
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
@@ -86,8 +85,6 @@ document.addEventListener('keydown', (event) => {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
-    cells[frog].classList.remove('frogTop')
-    cells[frog].classList.remove('frogBottom')
     frog += width
     cells[frog].classList.add('frog')
 
@@ -101,6 +98,43 @@ document.addEventListener('keydown', (event) => {
 
     //Arrow Right
   } else if (key === 'ArrowRight' && !(frog % width === width - 1)) {
+    cells[frog].classList.remove('frogWater')
+    cells[frog].classList.remove('frog')
+    cells[frog].classList.remove('frogGrass')
+    frog += 1
+    cells[frog].classList.add('frog')
+  }
+  if (key === 'w' && !(frog < width)) {
+    if (cells[frog].classList.contains('lilyLeave')) {
+      cells[frog].classList.add('frogWins')
+    }
+    cells[frog].classList.remove('frogWater')
+    cells[frog].classList.remove('frog')
+    cells[frog].classList.remove('frogGrass')
+    cells[frog].classList.remove('frogTop')
+    cells[frog].classList.remove('frogBottom')
+
+    frog -= width
+    cells[frog].classList.add('frog')
+
+    //Arrow Down
+  } else if (key === 's' && !(frog > (width ** 2) - width - 1)) {
+    cells[frog].classList.remove('frogWater')
+    cells[frog].classList.remove('frog')
+    cells[frog].classList.remove('frogGrass')
+    frog += width
+    cells[frog].classList.add('frog')
+
+    //Arrow Left
+  } else if (key === 'a' && !(frog % width === 0)) {
+    cells[frog].classList.remove('frogWater')
+    cells[frog].classList.remove('frog')
+    cells[frog].classList.remove('frogGrass')
+    frog -= 1
+    cells[frog].classList.add('frog')
+
+    //Arrow Right
+  } else if (key === 'd' && !(frog % width === width - 1)) {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
