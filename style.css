@@ -219,3 +219,20 @@ h3 {
   background-repeat: no-repeat;
   background-position-y: center;
 }
+.cell80 {
+  background-image: url("images/asdw.webp"), url(images/grass.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.gameover {
+  display: flex;
+  display: none;
+  z-index: 1;
+  background-color: white;
+  position: absolute;
+  align-items: center;
+  width: 470px;
+  height: 80px;
+  padding: 10px;
+}

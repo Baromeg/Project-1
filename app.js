@@ -10,6 +10,8 @@ const water = document.querySelector('.water')
 const cars = document.querySelector('.cars')
 const trunks = document.querySelector('.trunks')
 const grass = document.querySelector('.grass')
+const gameEnd = document.querySelector('.gameover')
+
 
 const cells = []
 const width = 9
@@ -46,6 +48,7 @@ cells[18].classList.add('water18')
 cells[35].classList.add('water18')
 cells[8].classList.add('water18')
 cells[80].classList.add('cell81')
+cells[72].classList.add('cell80')
 
 //* Start of the game / reset frog position. Could be improved resetting the board
 startButton.addEventListener('click', () => {
@@ -85,6 +88,8 @@ document.addEventListener('keydown', (event) => {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
+    cells[frog].classList.remove('frogBottom')
+    cells[frog].classList.remove('frogTop')
     frog += width
     cells[frog].classList.add('frog')
 
@@ -93,6 +98,8 @@ document.addEventListener('keydown', (event) => {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
+    cells[frog].classList.remove('frogBottom')
+    cells[frog].classList.remove('frogTop')
     frog -= 1
     cells[frog].classList.add('frog')
 
@@ -101,6 +108,8 @@ document.addEventListener('keydown', (event) => {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
+    cells[frog].classList.remove('frogBottom')
+    cells[frog].classList.remove('frogTop')
     frog += 1
     cells[frog].classList.add('frog')
   }
@@ -122,6 +131,8 @@ document.addEventListener('keydown', (event) => {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
+    cells[frog].classList.remove('frogBottom')
+    cells[frog].classList.remove('frogTop')
     frog += width
     cells[frog].classList.add('frog')
 
@@ -130,6 +141,8 @@ document.addEventListener('keydown', (event) => {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
+    cells[frog].classList.remove('frogBottom')
+    cells[frog].classList.remove('frogTop')
     frog -= 1
     cells[frog].classList.add('frog')
 
@@ -138,6 +151,8 @@ document.addEventListener('keydown', (event) => {
     cells[frog].classList.remove('frogWater')
     cells[frog].classList.remove('frog')
     cells[frog].classList.remove('frogGrass')
+    cells[frog].classList.remove('frogBottom')
+    cells[frog].classList.remove('frogTop')
     frog += 1
     cells[frog].classList.add('frog')
   }
@@ -163,6 +178,7 @@ setInterval(() => {
   carsArrayLeft.forEach((element, i) => {
     if (frog === element) {
       deadStopGame('A car run over you!')
+      cells[frog].classList.remove('frogBottom')
     } else if ((element === 54)) {
       cells[element].classList.remove('cars')
       carsArrayLeft[i] = 62
@@ -180,6 +196,7 @@ setInterval(() => {
   carsArrayRight.forEach((element, i) => {
     if (frog === element) {
       deadStopGame('A car run over you!')
+      cells[frog].classList.remove('frogTop')
     } else if ((element === 53)) {
       cells[element].classList.remove('cars2')
       carsArrayRight[i] = 45
@@ -393,7 +410,25 @@ const deadStopGame = (message) => {
     alert(`${message}.You lost one life. Try again!'`)
     displayLives.innerHTML -= 1
     cells[frog].classList.remove('frog')
+    cells[frog].classList.remove('frogBottom')
+
     frog = 76
     cells[frog].classList.add('frog')
   }
 }
+// const deadStopGame = (message, delay) => {
+//   if (displayLives.innerHTML <= 1) {
+//     confirm(`${message}.You lost all your lives. Would you like to play again?`)
+//     startGame()
+//   } else {
+//     gameEnd.style.display = 'block'
+//     gameEnd.innerHTML = `${message}.You lost one life. Try again!'`
+//     setTimeout(() => {
+//       gameEnd.style.display = 'none'
+//     }, delay)
+//     displayLives.innerHTML -= 1
+//     cells[frog].classList.remove('frog')
+//     frog = 76
+//     cells[frog].classList.add('frog')
+//   }
+// }
