@@ -177,8 +177,8 @@ bottomRoad.forEach((tile) => {
 setInterval(() => {
   carsArrayLeft.forEach((element, i) => {
     if (frog === element) {
-      deadStopGame('A car run over you!')
       cells[frog].classList.remove('frogBottom')
+      deadStopGame('A car run over you!')
     } else if ((element === 54)) {
       cells[element].classList.remove('cars')
       carsArrayLeft[i] = 62
@@ -195,8 +195,8 @@ setInterval(() => {
 setInterval(() => {
   carsArrayRight.forEach((element, i) => {
     if (frog === element) {
-      deadStopGame('A car run over you!')
       cells[frog].classList.remove('frogTop')
+      deadStopGame('A car run over you!')
     } else if ((element === 53)) {
       cells[element].classList.remove('cars2')
       carsArrayRight[i] = 45
