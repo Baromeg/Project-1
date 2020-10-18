@@ -9,7 +9,7 @@ const lilyLeave = document.querySelector('.lilyLeave')
 const water = document.querySelector('.water')
 const cars = document.querySelector('.cars')
 const trunks = document.querySelector('.trunks')
-const grass = document.querySelector('.grass')
+const grassClass = document.querySelector('.grass')
 const gameEnd = document.querySelector('.gameover')
 
 
@@ -27,7 +27,7 @@ const topRoad = [45, 46, 47, 48, 49, 50, 51, 52, 53]
 const bottomRoad = [54, 55, 56, 57, 58, 59, 60, 61, 62]
 const lilyLeavePosition = [0, 2, 4, 6, 8]
 const waterFront = [0, 1, 3, 5, 7]
-const crocodile = [9, 10, 11, 12, 13, 14, 15, 16, 17, 36, 37, 38, 39, 40, 41, 42, 43, 44, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 77, 78, 79, 80]
+const grass = [9, 10, 11, 12, 13, 14, 15, 16, 17, 36, 37, 38, 39, 40, 41, 42, 43, 44, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 77, 78, 79, 80]
 
 let frog = 76
 let crocodilePosition = 67
@@ -37,7 +37,7 @@ for (let index = 0; index < width ** 2; index++) {
   const div = document.createElement('div')
   div.classList.add('cell')
   grid.appendChild(div)
-  // div.innerHTML = index /*Adds index to each cell*/
+  // div.innerHTML = index /*Adds index to each cell if necessary*/
   cells.push(div)
 }
 
@@ -161,7 +161,7 @@ document.addEventListener('keydown', (event) => {
 //* Layout of fixed items
 //*The items are placed based on their arrays
 // Grass
-crocodile.forEach((grass) => {
+grass.forEach((grass) => {
   cells[grass].classList.add('grass')
 })
 // Top and bottom road
@@ -386,7 +386,7 @@ setInterval(() => {
     deadStopGame('A crocodile ate you!')
   }
   cells[crocodilePosition].classList.remove('crocodile')
-  crocodilePosition = crocodile[Math.floor(Math.random() * crocodile.length)]
+  crocodilePosition = grass[Math.floor(Math.random() * grass.length)]
   cells[crocodilePosition].classList.add('crocodile')
 }, 1000)
 
