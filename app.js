@@ -207,7 +207,7 @@ setInterval(() => {
       cells[element].classList.add('cars2')
     }
   })
-}, 400)
+}, 1200)
 
 //Trunks and water moving independently to the left
 setInterval(() => {
@@ -253,9 +253,9 @@ setInterval(() => {
       cells[element].classList.remove('frogWater')
     }
   })
-}, 600)
+}, 1000)
 
-//Trunks and water moving independently to the left
+//Trunks and water moving independently to the right
 setInterval(() => {
   //Movement of water
   waterTop.forEach((element, i) => {
@@ -300,7 +300,7 @@ setInterval(() => {
       cells[element].classList.remove('frogWater')
     }
   })
-}, 400)
+}, 800)
 
 setInterval(() => {
   if (cells[frog].classList.contains('grass')) {
@@ -377,7 +377,7 @@ setInterval(() => {
       cells[element].classList.add('lilyLeave')
     }
   })
-}, 600)
+}, 1000)
 
 //* Generates a random index to place the crocodile across the array of grass
 setInterval(() => {
