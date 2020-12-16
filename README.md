@@ -3,19 +3,19 @@
 
 I decided to build the game Frogger as my very first independently made Project as part of the Software Engineering Immersive course at General Assembly.
 
-I was tasked to choose from a set of grid-based game and develop a fully functional game, putting in practice all the concepts learned in this first part of the course.
+I was tasked to choose from a set of grid-based game and develop a fully functional game, putting in practice all the concepts learned in this first module of the course, HTML, CSS & JavaScript fundamentals.
 
 The main objective of the game is to guide the frog to the safety of a lily leave, avoiding the moving obstacles of a dangerously busy road and a strong current river.
 
 ## Brief:
-- Render a game in the browser
-- Design logic for winning & visually display which player won
-- Include separate HTML / CSS / JavaScript files
-- Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
-- Use Javascript for DOM manipulation
-- Deploy your game online, where the rest of the world can access it
-- Use semantic markup for HTML and CSS (adhere to best practices)
-- For this project "Frogger" has specific requirements
+- Render a game in the browser.
+- Design logic for winning & visually display which player won.
+- Include separate HTML / CSS / JavaScript files.
+- Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
+- Use Javascript for DOM manipulation.
+- Deploy your game online.
+- Use semantic markup for HTML and CSS (adhere to best practices).
+- For this project "Frogger" has specific requirements.
     - The game should be playable for one player.
     - The obstacles should be auto-generated.
 
