@@ -30,7 +30,7 @@ Technologies Used:
 
 ## Approach taken:
 ### - Grid layout:
-The grid was created in JavaScript using a for loop based on the desired width, created a div per cell and appended it to the grid container, correctly position in a square grid using Flexbox in CSS. This allows a much easier resizing if necessary in a later stage.
+The grid was created in JavaScript using a for loop based on the desired width, created a div per cell and appended it to the grid container, correctly position in a square grid using Flexbox in CSS. This allows a much easier resizing if necessary, in a later stage.
 
 ```
 for (let index = 0; index < width ** 2; index++) {
@@ -51,7 +51,6 @@ grass.forEach((grass) => {
 })
 [...]
 ```
-
 
 ### Functionality:
 ### - Frog Movement:
@@ -83,7 +82,6 @@ To achieve this, I added in the same interval, the `forEach()` for the array of 
 * If the frog jumps on top of the logs, it will be carried with the log until reaching the edge
 * In this example, the interval will reset the position of the moving parts once they reach the edge of the grid.
 * The interval also will detect collisions, either by the frog falling to the water or remaining in the log when it reaches the edge, using the statement `if`, populating a message with specific collision, that will be displayed in the alert.
-
 
 ```
 //Trunks and water moving independently to the left
@@ -179,14 +177,15 @@ const deadStopGame = (message) => {
 ![Game layout](/images/Screenshot.png)
 
 ## Potential Future Features
-- Mobile Compatability
+- Mobile Compatibility
 - Different difficulty levels
 - High score board with `localStorage`
 
 ## Challenges
-* Working with background pictures meant that the frog have different backgrounds to swap along with the section it found itself in, this was fixed by removing all frog skins within the keyboard event listener
+* Working with background pictures meant that the frog has different backgrounds to swap along with the section it found itself in, this was fixed by removing all frog skins within the keyboard event listener
 * When generating the movement of the logs and the water, I had to place the water at the beginning of the interval, as the last part of the log would pop as a drowned otherwise
 
 ## Lessons learned
 - Working on this game has allowed me to understand better the hierarchy of the elements, as in many cases, the solution was in placing the elements in the correct order.
 - The project has also help me process transition from very lengthy coding to spotting repetition and simplifying the code.
+
