@@ -14,6 +14,9 @@ The main objective of the game is to guide the frog to the safety of a lily leav
 
 Find it here! --> [Frogger](https://baromeg.github.io/project-1/)
 
+## Screenshots
+![Game layout](/images/Screenshot.png)
+
 ## Brief:
 - Render a game in the browser.
 - Design logic for winning & visually display which player won.
@@ -179,9 +182,6 @@ const deadStopGame = (message) => {
   }
 }
 ```
-
-## Screenshots
-![Game layout](/images/Screenshot.png)
 
 ## Potential Future Features
 - Mobile Compatibility
