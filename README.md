@@ -12,6 +12,8 @@ I was tasked to choose from a set of grid-based game and develop a fully functio
 
 The main objective of the game is to guide the frog to the safety of a lily leave, avoiding the moving obstacles of a dangerously busy road and a strong current river.
 
+Find it here! --> [Frogger](baromeg.github.io/project-1/)
+
 ## Brief:
 - Render a game in the browser.
 - Design logic for winning & visually display which player won.
